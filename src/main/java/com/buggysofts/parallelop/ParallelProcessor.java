@@ -39,7 +39,7 @@ public class ParallelProcessor {
                             currentRunnable.run();
 
                             // the given task is now complete and the result is stored in the internal result variable.
-                            // we add the result to our result list, which will propagate all the way to the caller through the TasksFinalizer.onAllTasksFinished() method.
+                            // we add the result to our result list, which will propagate all the way to the caller through the TasksCompletionCallback.onComplete() method.
                             results.add(currentRunnable.getResult());
 
                             // countdown the latch to free corresponding thread lock
