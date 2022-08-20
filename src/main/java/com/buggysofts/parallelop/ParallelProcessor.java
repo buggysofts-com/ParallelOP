@@ -11,7 +11,8 @@ public class ParallelProcessor {
 
     private final TasksCompletionCallback tasksCompletionCallback;
 
-    public ParallelProcessor(@NotNull List<TaskRunner<?, ?>> runnableList, @NotNull TasksCompletionCallback tasksCompletionCallback) {
+    public ParallelProcessor(@NotNull List<TaskRunner<?, ?>> runnableList,
+                             @NotNull TasksCompletionCallback tasksCompletionCallback) {
         this.runnableList = runnableList;
         this.tasksCompletionCallback = tasksCompletionCallback;
     }
