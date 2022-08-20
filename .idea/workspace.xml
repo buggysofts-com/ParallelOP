@@ -5,12 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25520187-8af9-4370-8a3f-ed5c1f81b554" name="Changes" comment="Initial commit.">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/buggysofts/parallelop/Finalizer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/buggysofts/parallelop/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/buggysofts/parallelop/ParallelProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/buggysofts/parallelop/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/buggysofts/parallelop/TaskRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -87,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660798472022</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial commit.">
+      <created>1660992229788</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660992229788</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
