@@ -28,7 +28,7 @@ Finally, add this dependency.
 ```
 And you are done importing the library in your maven project.
 
-<hr>
+<hr style="height:1px;">
 
 ### Gradle
 
