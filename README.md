@@ -32,7 +32,7 @@ And you are done importing the library in your maven project.
 
 ### Gradle
 
-#### Add JitPack repository to your project-level build.gradle file
+Add JitPack repository to your project-level build.gradle file
 ```
 ...
 
@@ -44,7 +44,7 @@ allprojects {
 }
 ```
 
-#### Or, in newer gradle projects, specially in android, if you need to the add repository in settings.gradle file...
+Or, in newer gradle projects, specially in android, if you need to the add repository in settings.gradle file...
 ```
 ...
 
@@ -56,8 +56,7 @@ dependencyResolutionManagement {
     }
 }
 ```
-
-#### Finally, add this dependency to your app/module level build.gradle file
+Finally, add this dependency to your app/module level build.gradle file
 ```
 ...
 
