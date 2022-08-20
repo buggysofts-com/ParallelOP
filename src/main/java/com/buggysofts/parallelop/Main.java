@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Arrays;
 import java.util.List;
 
-public class Main {
+class Main {
     public static void main(String[] args) throws InterruptedException {
         new ParallelProcessor(
             Arrays.asList(

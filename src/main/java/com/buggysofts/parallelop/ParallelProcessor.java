@@ -16,6 +16,10 @@ public class ParallelProcessor {
         this.tasksCompletionCallback = tasksCompletionCallback;
     }
 
+    /**
+     * Start executing all the passed tasks simultaneously. When they are finished, the results will be available through the TasksCompletionCallback.onComplete(...) callback.
+     * Note, this method creates separate threads for each of the given tasks. So, try limiting the number of tasks per single object.
+     * */
     public void start() throws InterruptedException {
         CountDownLatch countDownLatch = new CountDownLatch(runnableList.size());
 
@@ -65,6 +69,7 @@ public class ParallelProcessor {
         /**
          * When all the tasks are complete, TasksCompletionCallback.onComplete(...) is called with the results of the tasks.
          * @param resultList Results of the given tasks. The results are ordered in the same sequence as the tasks was given, i.e, i-th result contains the result of i-th task.
+         *                   Please note, although the list itself will never be null, but its elements may be null. Please check for nullability before working with each result component.
          * */
         public void onComplete(@NotNull List<?> resultList);
     }
