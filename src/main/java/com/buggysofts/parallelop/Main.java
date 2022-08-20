@@ -9,20 +9,20 @@ class Main {
     public static void main(String[] args) throws InterruptedException {
         new ParallelProcessor(
             Arrays.asList(
-                new TaskRunner<Integer, Integer>(
-                    5,
-                    new Task<Integer, Integer>() {
+                new TaskRunner<Integer[], Integer>(
+                    new Integer[]{1, 2, 3, 4, 5},
+                    new Task<Integer[], Integer>() {
                         @Override
-                        public Integer run(@NotNull Integer dataItem) {
+                        public Integer run(@NotNull Integer[] dataItem) {
                             int sum = 0;
-                            for (int i = 1; i <= dataItem; ++i) {
+                            for (int i = 0; i < dataItem.length; ++i) {
                                 try {
                                     System.out.println("Working on task 1");
                                     Thread.sleep(1000);
                                 } catch (InterruptedException e) {
                                     throw new RuntimeException(e);
                                 } finally {
-                                    sum += i;
+                                    sum += dataItem[i];
                                 }
                             }
                             return sum;
@@ -56,15 +56,17 @@ class Main {
                     for (int i = 0; i < resultList.size(); ++i) {
                         if(resultList.get(i) != null){
                             System.out.printf(
-                                "Result of operation %d: %d   -  Result type: %s\n",
+                                "Result of operation %d(%s): %d   -  Result type: %s\n",
                                 (i+1),
+                                (i == 0) ? "Sum" : "Factorial",
                                 resultList.get(i),
                                 resultList.get(i).getClass().getSimpleName()
                             );
                         } else {
                             System.out.printf(
-                                "Result of operation %d: null\n",
-                                (i+1)
+                                "Result of operation %d(%s): null\n",
+                                (i+1),
+                                (i == 0) ? "Sum" : "Factorial"
                             );
                         }
                     }

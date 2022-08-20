@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25520187-8af9-4370-8a3f-ed5c1f81b554" name="Changes" comment="Changed compiler source &amp; target to java 11.">
-      <change afterPath="$PROJECT_DIR$/jitpack.yml" afterDir="false" />
+    <list default="true" id="25520187-8af9-4370-8a3f-ed5c1f81b554" name="Changes" comment="Bug fixes and documentation updates.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/buggysofts/parallelop/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/buggysofts/parallelop/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/buggysofts/parallelop/ParallelProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/buggysofts/parallelop/ParallelProcessor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660995573202</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Changed compiler source &amp; target to java 8 along with some minor bug fixes.">
+      <created>1660999221316</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1660999221316</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,6 +150,8 @@
     <MESSAGE value="Added tasks completion result feature and some refactoring." />
     <MESSAGE value="Modified component visibility and updated documentations." />
     <MESSAGE value="Changed compiler source &amp; target to java 11." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed compiler source &amp; target to java 11." />
+    <MESSAGE value="Changed compiler source &amp; target to java 8 along with some minor bug fixes." />
+    <MESSAGE value="Bug fixes and documentation updates." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixes and documentation updates." />
   </component>
 </project>
