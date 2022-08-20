@@ -5,7 +5,7 @@ A simple, yet very powerful library to perform parallel operations with any kind
 <br />
 
 ## Import
-
+###
 ### Maven
 
 Add JitPack repository to your <b>pom.xml</b> file
@@ -28,6 +28,7 @@ Finally, add this dependency.
 ```
 And you are done importing the library in your maven project.
 
+###
 ### Gradle
 
 #### Add JitPack repository to your project-level build.gradle file
