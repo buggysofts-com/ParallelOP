@@ -22,10 +22,12 @@ public class ParallelProcessor {
      * Note, this method creates separate threads for each of the given tasks. So, try limiting the number of tasks per single object.
      * */
     public void start() throws InterruptedException {
+        // these two components are shared across multiple threads - make sure you access synchronously within any of the threads
+        // thread locking latch
         CountDownLatch countDownLatch = new CountDownLatch(runnableList.size());
-
         // data to pass after completing all tasks
         List<Object> results = new ArrayList<>(0);
+
         // assign tasks to new threads
         List<Thread> threads = new ArrayList<>(0);
         for (int i = 0; i < runnableList.size(); ++i) {
@@ -38,12 +40,16 @@ public class ParallelProcessor {
                             // run the given task
                             currentRunnable.run();
 
-                            // the given task is now complete and the result is stored in the internal result variable.
-                            // we add the result to our result list, which will propagate all the way to the caller through the TasksCompletionCallback.onComplete() method.
-                            results.add(currentRunnable.getResult());
-
-                            // countdown the latch to free corresponding thread lock
-                            countDownLatch.countDown();
+                            // perform operation synchronously on components that are shared on multiple threads
+                            synchronized (results){
+                                // the given task is now complete and the result is stored in the internal result variable.
+                                // we add the result to our result list, which will propagate all the way to the caller through the TasksCompletionCallback.onComplete() method.
+                                results.add(currentRunnable.getResult());
+                            }
+                            synchronized (countDownLatch){
+                                // countdown the latch to free corresponding thread lock
+                                countDownLatch.countDown();
+                            }
                         }
                     }
                 )
