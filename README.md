@@ -145,3 +145,10 @@ new ParallelProcessor(
     }
 ).start();
 ```
+
+<br />
+<br />
+
+Please share & rate the library if you find it useful.
+
+### Happy coding!
